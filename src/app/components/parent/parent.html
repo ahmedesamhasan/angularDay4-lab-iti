@@ -1,0 +1,7 @@
+<input [(ngModel)]="userName" placeholder="type name" />
+<button (click)="saveNote()">Save to service</button>
+
+<app-child [userName]="userName" (onNotify)="handleMessage($event)">
+</app-child>
+
+<p *ngIf="message">From child: {{ message }}</p>
